@@ -3,3 +3,7 @@ livekit-agents==1.2.6
 livekit-plugins-openai==1.2.6
 livekit-plugins-noise-cancellation==0.2.5
 openai==1.99.9
+opencv-python==4.10.0.84
+numpy==2.1.1
+openai==1.99.9
+python-dotenv==1.1.1
