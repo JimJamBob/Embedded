@@ -1,0 +1,5 @@
+python-dotenv==1.1.1
+livekit-agents==1.2.6
+livekit-plugins-openai==1.2.6
+livekit-plugins-noise-cancellation==0.2.5
+openai==1.99.9
