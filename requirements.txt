@@ -7,3 +7,11 @@ opencv-python==4.10.0.84
 numpy==2.1.1
 openai==1.99.9
 python-dotenv==1.1.1
+livekit
+opencv-python
+pyaudio
+pyttsx3
+numpy
+PyAudio>=0.2.14
+numpy>=2.0.2
+sounddevice

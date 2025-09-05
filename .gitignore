@@ -1,1 +1,5 @@
 .env
+imageAPI.py
+imageAPIonPi.py
+Random.py
+camera_connection.txt
