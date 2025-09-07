@@ -134,8 +134,8 @@ class AudioStreamer:
             list_audio_devices()
             
             # Get device info - but override input device to use working microphone
-            input_device, output_device = sd.default.device
-            
+            input_device = 9  # Microphone Array (Realtek High Definition Audio(SST)), 48000 Hz, HostAPI 2
+            output_device = 8  # Speaker/Headphone (Realtek High Definition Audio(SST)), 48000 Hz, HostAPI 2            
             # Override to use DC Microphone (device 1) which is working
             #input_device = 1  # DC Microphone
             
