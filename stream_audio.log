@@ -31590,3 +31590,240 @@ sounddevice.PortAudioError: Error opening InputStream: Invalid number of channel
 2025-11-09 12:54:05,302 - __main__ - INFO - Stopping audio devices...
 2025-11-09 12:54:05,302 - __main__ - INFO - Audio devices stopped
 2025-11-09 12:54:05,302 - __main__ - INFO - === CLEANUP COMPLETE ===
+2025-11-09 12:59:32,388 - __main__ - INFO - === STARTING AUDIO STREAMER ===
+2025-11-09 12:59:32,388 - __main__ - INFO - LIVEKIT_URL: wss://my-first-project-7ci5luaf.livekit.cloud
+2025-11-09 12:59:32,388 - __main__ - INFO - ROOM_NAME: 123
+2025-11-09 12:59:32,390 - livekit - INFO - livekit_ffi::server:139:livekit_ffi::server - initializing ffi server v0.12.30
+2025-11-09 12:59:32,390 - livekit - INFO - livekit_ffi::cabi:36:livekit_ffi::cabi - initializing ffi server v0.12.30
+2025-11-09 12:59:32,390 - __main__ - INFO - Initializing Audio Processing Module with Echo Cancellation
+2025-11-09 12:59:32,392 - __main__ - INFO - Starting audio devices...
+2025-11-09 12:59:32,392 - __main__ - INFO - Starting audio devices...
+2025-11-09 12:59:32,404 - __main__ - INFO - Using input device: 9, output device: 8
+2025-11-09 12:59:32,404 - __main__ - INFO - Input device info: {'name': 'Speakers (HP USB Media Audio)', 'index': 9, 'hostapi': 1, 'max_input_channels': 0, 'max_output_channels': 6, 'default_low_input_latency': 0.0, 'default_low_output_latency': 0.12, 'default_high_input_latency': 0.0, 'default_high_output_latency': 0.24, 'default_samplerate': 44100.0}
+2025-11-09 12:59:32,405 - __main__ - WARNING - Input device only has 0 channels, need 1
+2025-11-09 12:59:32,405 - __main__ - INFO - Creating input stream: rate=48000, channels=1, blocksize=4800
+2025-11-09 12:59:32,405 - __main__ - ERROR - Failed to start audio devices: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+2025-11-09 12:59:32,408 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 157, in start_audio_devices
+    self.input_stream = sd.InputStream(
+                        ~~~~~~~~~~~~~~^
+        callback=self._input_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        blocksize=BLOCKSIZE,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 1440, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         **_remove_self(locals()))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              samplerate, blocksize, stream_flags,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              callback_ptr, userdata),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+           f'Error opening {self.__class__.__name__}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 2804, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+
+2025-11-09 12:59:32,408 - __main__ - ERROR - Error in main: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+2025-11-09 12:59:32,410 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 726, in main
+    streamer.start_audio_devices()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 157, in start_audio_devices
+    self.input_stream = sd.InputStream(
+                        ~~~~~~~~~~~~~~^
+        callback=self._input_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        blocksize=BLOCKSIZE,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 1440, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         **_remove_self(locals()))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              samplerate, blocksize, stream_flags,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              callback_ptr, userdata),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+           f'Error opening {self.__class__.__name__}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 2804, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+
+2025-11-09 12:59:32,410 - __main__ - INFO - Starting cleanup...
+2025-11-09 12:59:32,410 - __main__ - INFO - Stopping audio devices...
+2025-11-09 12:59:32,410 - __main__ - INFO - Audio devices stopped
+2025-11-09 12:59:32,411 - __main__ - INFO - === CLEANUP COMPLETE ===
+2025-11-09 13:55:42,673 - __main__ - INFO - === STARTING AUDIO STREAMER ===
+2025-11-09 13:55:42,674 - __main__ - INFO - LIVEKIT_URL: wss://my-first-project-7ci5luaf.livekit.cloud
+2025-11-09 13:55:42,674 - __main__ - INFO - ROOM_NAME: 123
+2025-11-09 13:55:42,681 - livekit - INFO - livekit_ffi::server:139:livekit_ffi::server - initializing ffi server v0.12.30
+2025-11-09 13:55:42,682 - livekit - INFO - livekit_ffi::cabi:36:livekit_ffi::cabi - initializing ffi server v0.12.30
+2025-11-09 13:55:42,684 - __main__ - INFO - Initializing Audio Processing Module with Echo Cancellation
+2025-11-09 13:55:42,692 - __main__ - INFO - Starting audio devices...
+2025-11-09 13:55:42,692 - __main__ - INFO - Starting audio devices...
+2025-11-09 13:55:42,706 - __main__ - INFO - Using input device: 9, output device: 8
+2025-11-09 13:55:42,707 - __main__ - INFO - Input device info: {'name': 'Speakers (HP USB Media Audio)', 'index': 9, 'hostapi': 1, 'max_input_channels': 0, 'max_output_channels': 6, 'default_low_input_latency': 0.0, 'default_low_output_latency': 0.12, 'default_high_input_latency': 0.0, 'default_high_output_latency': 0.24, 'default_samplerate': 44100.0}
+2025-11-09 13:55:42,707 - __main__ - WARNING - Input device only has 0 channels, need 1
+2025-11-09 13:55:42,707 - __main__ - INFO - Creating input stream: rate=48000, channels=1, blocksize=4800
+2025-11-09 13:55:42,707 - __main__ - ERROR - Failed to start audio devices: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+2025-11-09 13:55:42,739 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 157, in start_audio_devices
+    self.input_stream = sd.InputStream(
+                        ~~~~~~~~~~~~~~^
+        callback=self._input_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        blocksize=BLOCKSIZE,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 1440, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         **_remove_self(locals()))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              samplerate, blocksize, stream_flags,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              callback_ptr, userdata),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+           f'Error opening {self.__class__.__name__}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 2804, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+
+2025-11-09 13:55:42,739 - __main__ - ERROR - Error in main: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+2025-11-09 13:55:42,741 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 726, in main
+    streamer.start_audio_devices()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 157, in start_audio_devices
+    self.input_stream = sd.InputStream(
+                        ~~~~~~~~~~~~~~^
+        callback=self._input_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        blocksize=BLOCKSIZE,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 1440, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         **_remove_self(locals()))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              samplerate, blocksize, stream_flags,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              callback_ptr, userdata),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+           f'Error opening {self.__class__.__name__}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 2804, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+
+2025-11-09 13:55:42,741 - __main__ - INFO - Starting cleanup...
+2025-11-09 13:55:42,741 - __main__ - INFO - Stopping audio devices...
+2025-11-09 13:55:42,741 - __main__ - INFO - Audio devices stopped
+2025-11-09 13:55:42,741 - __main__ - INFO - === CLEANUP COMPLETE ===
+2025-11-09 14:10:12,981 - __main__ - INFO - === STARTING AUDIO STREAMER ===
+2025-11-09 14:10:12,981 - __main__ - INFO - LIVEKIT_URL: wss://my-first-project-7ci5luaf.livekit.cloud
+2025-11-09 14:10:12,981 - __main__ - INFO - ROOM_NAME: 123
+2025-11-09 14:10:12,983 - livekit - INFO - livekit_ffi::server:139:livekit_ffi::server - initializing ffi server v0.12.30
+2025-11-09 14:10:12,983 - livekit - INFO - livekit_ffi::cabi:36:livekit_ffi::cabi - initializing ffi server v0.12.30
+2025-11-09 14:10:12,984 - __main__ - INFO - Initializing Audio Processing Module with Echo Cancellation
+2025-11-09 14:10:12,986 - __main__ - INFO - Starting audio devices...
+2025-11-09 14:10:12,986 - __main__ - INFO - Starting audio devices...
+2025-11-09 14:10:12,997 - __main__ - INFO - Using input device: 9, output device: 8
+2025-11-09 14:10:12,997 - __main__ - INFO - Input device info: {'name': 'Speakers (HP USB Media Audio)', 'index': 9, 'hostapi': 1, 'max_input_channels': 0, 'max_output_channels': 6, 'default_low_input_latency': 0.0, 'default_low_output_latency': 0.12, 'default_high_input_latency': 0.0, 'default_high_output_latency': 0.24, 'default_samplerate': 44100.0}
+2025-11-09 14:10:12,997 - __main__ - WARNING - Input device only has 0 channels, need 1
+2025-11-09 14:10:12,997 - __main__ - INFO - Creating input stream: rate=48000, channels=1, blocksize=4800
+2025-11-09 14:10:12,998 - __main__ - ERROR - Failed to start audio devices: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+2025-11-09 14:10:13,001 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 157, in start_audio_devices
+    self.input_stream = sd.InputStream(
+                        ~~~~~~~~~~~~~~^
+        callback=self._input_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        blocksize=BLOCKSIZE,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 1440, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         **_remove_self(locals()))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              samplerate, blocksize, stream_flags,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              callback_ptr, userdata),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+           f'Error opening {self.__class__.__name__}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 2804, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+
+2025-11-09 14:10:13,001 - __main__ - ERROR - Error in main: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+2025-11-09 14:10:13,003 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 726, in main
+    streamer.start_audio_devices()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\james\Desktop\Business Ideas\AI Hard Hat\Repositorys\Embedded\stream_audio.py", line 157, in start_audio_devices
+    self.input_stream = sd.InputStream(
+                        ~~~~~~~~~~~~~~^
+        callback=self._input_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        blocksize=BLOCKSIZE,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 1440, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         **_remove_self(locals()))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              samplerate, blocksize, stream_flags,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                              callback_ptr, userdata),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+           f'Error opening {self.__class__.__name__}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\james\AppData\Local\Programs\Python\Python313\Lib\site-packages\sounddevice.py", line 2804, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Invalid number of channels [PaErrorCode -9998]
+
+2025-11-09 14:10:13,003 - __main__ - INFO - Starting cleanup...
+2025-11-09 14:10:13,003 - __main__ - INFO - Stopping audio devices...
+2025-11-09 14:10:13,003 - __main__ - INFO - Audio devices stopped
+2025-11-09 14:10:13,004 - __main__ - INFO - === CLEANUP COMPLETE ===
